@@ -11,7 +11,7 @@ console.log(arr);
 arr.splice(1, 1);
 console.log(arr);
 
-// Traverse an arrau
+// Traverse an array
 for (let i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
