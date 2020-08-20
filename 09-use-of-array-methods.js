@@ -2,7 +2,7 @@
  * Find sum of all even numbers in an array
  */
 
-const arr = [10, 20, 21, 28, 27, 91, 51, 54, 75];
+const arr = [10, 20, 21, 31, 28, 53, 27, 91, 79, 51, 54, 75, 113];
 
 // Traditional method
 let sum = 0;
@@ -46,3 +46,19 @@ console.log(
 );
 
 //Todo: Find sum of all prime numbers in array arr
+// [10, 20, 21, 31, 28, 53, 27, 91, 79, 51, 54, 75, 113]
+const isPrime = (num) => {
+  if (num == 2) return true;
+  if (num % 2 == 0) return false;
+
+  for (let i = 3; i < Math.sqrt(num); i += 2) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(
+  arr.filter((val) => isPrime(val)).reduce((val, total) => val + total)
+);
